@@ -1,0 +1,51 @@
+Title = American League Baseball 1948 (Mosteller, F., 1951, Psychometrika, 16/2, 207-218)
+Output = BASEBALL.OUT    ; name of output file
+CSV = Yes                ;
+ASCII = Yes              ;
+facets = 3               ; three facets in data: winning and losing team
+arrange = m,N            ; arrange tables by measure-descending, element number-ascending
+entered in data = 2,1,1  ; classifying facet, then two elements are from facet 1
+positive = 1             ; more wins - higher measure
+non-centered = 0         ; all facets centered
+unexpected = 2           ; report ratings if standardized residual >=|2|
+models=
+22,?,-?,B22,0.5          ; first team opposes second team 22 times
+21,?,-?,B21,0.5          ; Washington-Chicago played 21 times
+23,?,-?,B23,0.5          ; Cleveland-Boston played 23 times
+; weighted 0.5 because all data points entered twice
+*
+labels =
+1,Teams                  ; name of first facet
+1=Cleveland              ; names of elements, cities
+2=Boston
+3=New York
+4=Philadelphia
+5=Detroit
+6=Saint Louis
+7=Washington
+8=Chicago
+*
+2,Games played,A         ; dummy facet - all elements anchored at 0
+21,21 games,0            ; used for model selection only - anchored at 0
+22,22 games,0
+23,23 games,0
+*
+data=
+23,1,2,12    ; In 23 games, Cleveland beat Boston 12 times
+22,1,3-8,10,16,13,14,16,16
+22,2,3-8,14,12,15,15,15,14
+22,3,4-8,12,13,16,17,16
+22,4,5-8,10,18,14,16
+22,5,6-8,11,16,14
+22,6,7,10
+21,6-7,8,13,12  ; Chicago only played 21 games against 2 teams
+; same data pairs reversed
+23,  2,1  ,11    ; In 23 games, Boston beat Cleveland 11 times
+22,3-8,1  ,12, 6, 9, 8, 6, 6
+22,3-8,2  , 8,10, 7, 7, 7, 8
+22,4-8,3  ,10, 9, 6, 5, 6
+22,5-8,4  ,12, 4, 8, 6
+22,6-8,5  ,11, 6, 8
+22,  7,6  ,12
+21,  8,6-7, 8, 9  ; Chicago only played 21 games against 2 teams
+
