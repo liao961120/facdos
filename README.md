@@ -1,7 +1,7 @@
 # Running Facets with DOSBox
 
 This directory contains all the files and binaries necessary to run 
-[facdos](https://www.winsteps.com/facdos.htm) in Windows 7/10, 
+[facdos](https://www.winsteps.com/facdos.htm) on Windows 7/10, 
 [Facets](https://www.winsteps.com/facets.htm) released in 1999.
 
 
