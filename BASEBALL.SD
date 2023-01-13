@@ -1,7 +1,6 @@
 Title = American League Baseball 1948 (Mosteller, F., 1951, Psychometrika, 16/2, 207-218)
 Output = BASEBALL.OUT    ; name of output file
 CSV = Yes                ;
-ASCII = Yes              ;
 facets = 3               ; three facets in data: winning and losing team
 arrange = m,N            ; arrange tables by measure-descending, element number-ascending
 entered in data = 2,1,1  ; classifying facet, then two elements are from facet 1
@@ -48,4 +47,3 @@ data=
 22,6-8,5  ,11, 6, 8
 22,  7,6  ,12
 21,  8,6-7, 8, 9  ; Chicago only played 21 games against 2 teams
-
